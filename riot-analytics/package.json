@@ -1,0 +1,17 @@
+{
+  "name": "riot-personal-analytics-extractor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first Riot Games API exporter for a personal League of Legends account",
+  "scripts": {
+    "start": "node src/index.js",
+    "check": "node --check src/index.js && node --check src/riot-client.js && node --check src/analyse.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
