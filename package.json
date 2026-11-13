@@ -1,13 +1,13 @@
 {
-  "name": "umami",
+  "name": "metricly",
   "version": "3.5.0",
-  "description": "An open-source web and product analytics platform.",
+  "description": "Privacy-first web analytics for businesses and independent teams.",
   "author": "Umami Software, Inc. <hello@umami.is>",
   "license": "MIT",
-  "homepage": "https://umami.is",
+  "homepage": "https://metricly.co.uk",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umami-software/umami.git"
+    "url": "https://github.com/j2grows-cmd/metricly.git"
   },
   "type": "module",
   "engines": {
