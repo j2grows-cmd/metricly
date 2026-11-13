@@ -1,135 +1,44 @@
 <p align="center">
-  <img src="https://content.umami.is/website/images/umami-logo.png" alt="Umami Logo" width="100">
+  <strong>Metricly</strong>
 </p>
 
-<h1 align="center">Umami</h1>
+<h1 align="center">Metricly</h1>
 
 <p align="center">
-  <i>Umami is an open-source web and product analytics platform. Understand acquisition, behavior, conversion, and retention with privacy-first analytics — no cookies, self-hosted or in the cloud.</i>
+  <i>Privacy-first web analytics for businesses, freelancers and growing teams.</i>
 </p>
 
 <p align="center">
-  <a href="https://github.com/umami-software/umami/releases"><img src="https://img.shields.io/github/release/umami-software/umami.svg" alt="GitHub Release" /></a>
-  <a href="https://github.com/umami-software/umami/blob/master/LICENSE"><img src="https://img.shields.io/github/license/umami-software/umami.svg" alt="MIT License" /></a>
-  <a href="https://github.com/umami-software/umami/actions"><img src="https://img.shields.io/github/actions/workflow/status/umami-software/umami/ci.yml" alt="Build Status" /></a>
-  <a href="https://cloud.umami.is/share/LGazGOecbDtaIwDr/umami.is" style="text-decoration: none;"><img src="https://img.shields.io/badge/Try%20Demo%20Now-Click%20Here-brightgreen" alt="Umami Demo" /></a>
+  <a href="https://github.com/j2grows-cmd/metricly/blob/master/LICENSE"><img src="https://img.shields.io/github/license/j2grows-cmd/metricly.svg" alt="MIT License" /></a>
+  <a href="https://github.com/j2grows-cmd/metricly/actions"><img src="https://img.shields.io/github/actions/workflow/status/j2grows-cmd/metricly/ci.yml" alt="Build Status" /></a>
 </p>
 
 ---
 
-## 🚀 Getting Started
+## About Metricly
 
-A detailed getting started guide can be found at [umami.is/docs](https://umami.is/docs/).
+Metricly is being developed as a privacy-first analytics service for small businesses, freelancers and agencies. The project is currently in active development.
 
----
+The application is based on [Umami](https://github.com/umami-software/umami), an open-source web analytics platform. Metricly intends to build on its established analytics, event collection and reporting capabilities while developing its own product experience, organisation management and subscription services.
 
-## 🛠 Installing from Source
+## Development status
 
-### Requirements
+This repository is the development home for Metricly. Product functionality, pricing, deployment and documentation are subject to change while the project is being built.
 
-- A server with Node.js version 20.19+ (22 LTS recommended).
-- A PostgreSQL database version v12.14+.
+## Getting started
 
-### Get the source code and install packages
+Metricly currently follows the upstream Umami development and installation process. Please consult the [upstream Umami documentation](https://umami.is/docs) for the current source installation requirements and configuration until Metricly-specific deployment documentation is published.
 
-```bash
-git clone https://github.com/umami-software/umami.git
-cd umami
-pnpm install
-```
+The project uses pnpm workspaces. Use the package manager version declared in `package.json`.
 
-### Configure Umami
+## Upstream project and attribution
 
-Create an `.env` file with the following:
+Metricly is derived from [Umami](https://github.com/umami-software/umami), Copyright (c) 2022 Umami Software, Inc.
 
-```bash
-DATABASE_URL=connection-url
-APP_SECRET=random-string  # generate with: openssl rand -hex 32
-```
+The original project is distributed under the MIT License. The original copyright and licence notices are retained in this repository. See [LICENSE](./LICENSE) for the complete licence.
 
-The connection URL format:
+Metricly is an independent project and is not affiliated with or endorsed by Umami Software, Inc.
 
-```bash
-postgresql://username:mypassword@localhost:5432/mydb
-```
+## Contributing
 
-### Build the Application
-
-```bash
-pnpm run build
-```
-
-The build step will create tables in your database if you are installing for the first time. It will also create a login user with username **admin** and password **umami**. You will be required to change this password after signing in.
-
-### Start the Application
-
-```bash
-pnpm run start
-```
-
-By default, this will launch the application on `http://localhost:3000`. You will need to either [proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) requests from your web server or change the [port](https://nextjs.org/docs/api-reference/cli#production) to serve the application directly.
-
-To bind to the `HOSTNAME` and `PORT` set in your `.env` file, start with `pnpm run start:env` instead.
-
----
-
-## 🐳 Installing with Docker
-
-Umami provides Docker images as well as a Docker compose file for easy deployment.
-
-Docker image:
-
-```bash
-docker pull docker.umami.is/umami-software/umami:latest
-```
-
-Docker compose (Runs Umami with a PostgreSQL database):
-
-```bash
-docker compose up -d
-```
-
----
-
-## 🔄 Getting Updates
-
-To get the latest features, simply do a pull, install any new dependencies, and rebuild:
-
-```bash
-git pull
-pnpm install
-pnpm build
-```
-
-To update the Docker image, simply pull the new images and rebuild:
-
-```bash
-docker compose pull
-docker compose up --force-recreate -d
-```
-
----
-
-## 🛟 Support
-
-<p align="center">
-  <a href="https://github.com/umami-software/umami"><img src="https://img.shields.io/badge/GitHub--blue?style=social&logo=github" alt="GitHub" /></a>
-  <a href="https://twitter.com/umami_software"><img src="https://img.shields.io/badge/Twitter--blue?style=social&logo=twitter" alt="Twitter" /></a>
-  <a href="https://linkedin.com/company/umami-software"><img src="https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin" alt="LinkedIn" /></a>
-  <a href="https://umami.is/discord"><img src="https://img.shields.io/badge/Discord--blue?style=social&logo=discord" alt="Discord" /></a>
-</p>
-
-[release-shield]: https://img.shields.io/github/release/umami-software/umami.svg
-[releases-url]: https://github.com/umami-software/umami/releases
-[license-shield]: https://img.shields.io/github/license/umami-software/umami.svg
-[license-url]: https://github.com/umami-software/umami/blob/master/LICENSE
-[build-shield]: https://img.shields.io/github/actions/workflow/status/umami-software/umami/ci.yml
-[build-url]: https://github.com/umami-software/umami/actions
-[github-shield]: https://img.shields.io/badge/GitHub--blue?style=social&logo=github
-[github-url]: https://github.com/umami-software/umami
-[twitter-shield]: https://img.shields.io/badge/Twitter--blue?style=social&logo=twitter
-[twitter-url]: https://twitter.com/umami_software
-[linkedin-shield]: https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin
-[linkedin-url]: https://linkedin.com/company/umami-software
-[discord-shield]: https://img.shields.io/badge/Discord--blue?style=social&logo=discord
-[discord-url]: https://discord.com/invite/4dz4zcXYrQ
+Development currently takes place on the `develop` branch. The `master` branch is retained as the upstream baseline. Changes intended for Metricly should be made on `develop` and reviewed before being merged into the release branch.
