@@ -6,7 +6,6 @@ import { useMessages, useNavigation } from '@/components/hooks';
 import { Globe, Grid2x2, LayoutDashboard, LinkIcon, PanelsLeftBottom } from '@/components/icons';
 import { MobileMenuButton } from '@/components/input/MobileMenuButton';
 import { UserButton } from '@/components/input/UserButton';
-import { Logo } from '@/components/svg';
 import { AdminNav } from './admin/AdminNav';
 import { SettingsNav } from './settings/SettingsNav';
 
@@ -81,9 +80,7 @@ export function MobileNav() {
         }}
       </MobileMenuButton>
       <Row alignItems="center" justifyContent="center" flexGrow={1}>
-        <IconLabel icon={<Logo />} style={{ width: 'auto' }}>
-          <Text weight="bold">umami</Text>
-        </IconLabel>
+        <Text weight="bold">Metricly</Text>
       </Row>
     </Grid>
   );
