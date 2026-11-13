@@ -25,7 +25,6 @@ import {
   PanelsLeftBottom,
 } from '@/components/icons';
 import { UserButton } from '@/components/input/UserButton';
-import { Logo } from '@/components/svg';
 
 export function SideNav(props: any) {
   const { t, labels } = useMessages();
@@ -98,9 +97,7 @@ export function SideNav(props: any) {
           flexGrow="1"
         >
           {!isCollapsed && (
-            <IconLabel icon={<Logo />}>
-              <Text weight="bold">umami</Text>
-            </IconLabel>
+            <Text weight="bold">Metricly</Text>
           )}
           <PanelButton />
         </Row>
